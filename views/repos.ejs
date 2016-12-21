@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/materialize.css">
+        <title>Repositiory names</title>
+    </head>
+    <body>
+        <h1>GitHub Repo</h1>
+
+        <table class="stripped" style="width:100%" border"2px">
+            <tr>
+                <th>Repo Name</th>
+                <th>Commits</th>
+            </tr>
+
+            <tr>
+                <% for (var i in repos) { %>
+                <tr>
+                    <td><%= repos[i].name %></td>
+                    <td><a href="#" data-link="<%= repos[i].commits_url %>" name="commitLink"><%= repos[i].commits_url %></a></td>
+                    <!--<td><img src="<%= repos[i].owner.avatar_url %>" /></td>-->
+                    <!--<td><%= repos[i].git_commits_url %></td>-->
+                </tr>
+            </tr>
+                <% } %>
+
+        </table>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/userNames.js"></script>
+    </body>
+</html>
+
