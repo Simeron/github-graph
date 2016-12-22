@@ -44,7 +44,7 @@ $(() => {
     }
 
 
-    $('#commitLink').on('click', (event) => {//click event for when an element on the body is clicked
+    $('body').on('click', (event) => {//click event for when an element on the body is clicked
         event.preventDefault();
         console.log("hello");//visual rep of the element that was clicked
         if (event.target.id === "commitLink"){//if the event.target.name = repoLink = the string repo
