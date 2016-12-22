@@ -17,7 +17,7 @@
                 <% for (var i in repos) { %>
                 <tr>
                     <td><%= repos[i].name %></td>
-                    <td><a href="#" data-link="<%= repos[i].commits_url %>" name="commitLink"><%= repos[i].commits_url %></a></td>
+                    <td><a id="commitLink" href="#" data-link="<%= repos[i].commits_url %>"><%= repos[i].commits_url %></a></td>
                     <!--<td><img src="<%= repos[i].owner.avatar_url %>" /></td>-->
                     <!--<td><%= repos[i].git_commits_url %></td>-->
                 </tr>

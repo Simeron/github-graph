@@ -44,16 +44,17 @@ $(() => {
     }
 
 
-    $('#graphCommits').on('click', (event) => {//click event for when an element on the body is clicked
+    $('#commitLink').on('click', (event) => {//click event for when an element on the body is clicked
         event.preventDefault();
-        console.log(event.target.name);//visual rep of the element that was clicked
-        if (event.target.name === "commitLink"){//if the event.target.name = repoLink = the string repo
+        console.log("hello");//visual rep of the element that was clicked
+        if (event.target.id === "commitLink"){//if the event.target.name = repoLink = the string repo
             // console.log($(event.target).attr("data-graph"));
-            updateServerWithCommits($(event.target).attr("data-graph"));
+            updateServerWithCommits($(event.target).attr("data-link"));
         }
     });
 
     function updateServerWithCommits(commits){
+        console.log("i am here top");
         $.ajax({
             url: '/set-commits',
                 method: 'POST',
@@ -62,6 +63,7 @@ $(() => {
                 }
             })
             .then((data) =>  {
+                console.log("i am here")
                 window.location.href = "/graph";
             });
     }
