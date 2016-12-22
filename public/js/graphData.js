@@ -34,7 +34,7 @@ $(() => {
             var dataInfo = [trace1];
 
             Plotly.newPlot('myDiv', dataInfo);
-            
+
         });
 
 

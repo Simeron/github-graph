@@ -1,12 +1,25 @@
 class Commit {
 
-    constructor(obj){
+    constructor(obj) {
         this.author = obj.author.login;
         this.commitDate = new Date(obj.commit.committer.date);
         this.commitMessage = obj.commit.message;
-        this.sha = obj.sha;
     }
 
 }
 
 module.exports = Commit;
+
+
+
+//     Person = {
+//         name: "Sim",
+//         age:" 40"
+//     }
+
+
+// func = (obj) => {
+//     this.name = obj.name;
+//     this.age = obj.age
+
+// }

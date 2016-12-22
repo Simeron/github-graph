@@ -1,0 +1,21 @@
+body{
+    background-color: pink;
+}
+
+h1{
+    text-align: center;
+}
+
+#enterUsername{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search{
+    margin-left: 45%;
+    
+}
+
+a[name] {
+    display: block;
+}

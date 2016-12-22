@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/materialize.css">
-<!--style sheet goes here-->
-        <title>Search for a user results</title>
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--style sheet goes here-->
+    <title>Search for a user results</title>
+</head>
+
+<body>
+    <div class="row container">
         <h1>Search for a GitHub Handle</h1>
- 
+
         <div id="enterUsername" data-repo="repo">
             <input type="search" id="searchBar">
-            <button id="search">Search</button>
+            <a class="waves-effect waves-teal btn-flat" id="search">Search</a>
+            <!--<a class="waves-effect waves-light btn" id="search">button</a>-->
+            <!--<button id="search">Search</button>-->
         </div>
-        <script src="js/jquery-3.1.1.min.js"></script>
-<!--graph plot thing goes here-->
-         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/userNames.js"></script>
-        <!--<script src="js/graphData.js"></script>-->
-    </body>
+    </div>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--graph plot thing goes here-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/userNames.js"></script>
+    <!--<script src="js/graphData.js"></script>-->
+</body>
+
 </html>

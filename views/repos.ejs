@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/materialize.css">
-        <title>Repositiory names</title>
-    </head>
-    <body>
-        <h1>GitHub Repo</h1>
 
-        <table class="stripped" style="width:100%" border"2px">
-            <tr>
-                <th>Repo Name</th>
-                <th>Commits</th>
-            </tr>
+<head>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Repositiory names</title>
+</head>
 
-            <tr>
-                <% for (var i in repos) { %>
+<body>
+    <h1>GitHub Repo</h1>
+
+    <table class="stripped" style="width:100%" border "2px">
+        <tr>
+            <th>Repo Name</th>
+            <th>Commits</th>
+        </tr>
+
+        <tr>
+            <% for (var i in repos) { %>
                 <tr>
-                    <td><%= repos[i].name %></td>
-                    <td><a id="commitLink" href="#" data-link="<%= repos[i].commits_url %>"><%= repos[i].commits_url %></a></td>
+                    <td>
+                        <%= repos[i].name %>
+                    </td>
+                    <td>
+                        <a id="commitLink" href="#" data-link="<%= repos[i].commits_url %>">
+                            <%= repos[i].commits_url %>
+                        </a>
+                    </td>
                     <!--<td><img src="<%= repos[i].owner.avatar_url %>" /></td>-->
                     <!--<td><%= repos[i].git_commits_url %></td>-->
                 </tr>
-            </tr>
-                <% } %>
+        </tr>
+        <% } %>
 
-        </table>
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/userNames.js"></script>
-        <!--<script src="js/graphData.js"></script>-->
-    </body>
+    </table>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/userNames.js"></script>
+    <!--<script src="js/graphData.js"></script>-->
+</body>
+
 </html>
-
