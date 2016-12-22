@@ -24,7 +24,7 @@ class ShowController {
     static getRepos(req, res){
         FetchRepo.doFetchRepos(req.body.repos)
             .then(result => {
-                console.log(result);
+                //console.log(result);
                 req.session.repos = result;
                 res.status(200).send({
                     user: req.body.repos,
@@ -38,10 +38,10 @@ class ShowController {
     }
 
     static getCommits(req, res){
-        FetchCommits.doFetchCommits(req.body.commits_url)
+        FetchCommits.doFetchCommits(req.body.commitsInfo)
             .then(result => {
-                console.log(result);
-                req.session.commits_url = result; //this could have potentially of broken something
+                //console.log(result);
+                req.session.commits = result; //this could have potentially of broken something
                 res.status(200).send({
                     user: req.body.commits_url,
                     result: result
@@ -51,6 +51,10 @@ class ShowController {
                 console.log(err.message);
                 res.status(400).send(err);
             });
+    }
+
+    static returnCommits(req,res){
+        res.status(200).send(req.session.commits);
     }
 }
 
