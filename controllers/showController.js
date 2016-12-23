@@ -2,12 +2,15 @@ const FetchUsers = require("../lib/fetchUsers");
 const FetchRepo = require("../lib/fetchRepos");
 const FetchCommits = require("../lib/fetchCommits");
 
-class ShowController {
-    // static users(req, res){
-    //     res.render("repos");
-    // }
 
-    static getUsers(req, res){
+/**
+   * Overall this file the show controller talks to the lib api document
+    */
+
+
+class ShowController {
+
+    static getUsers(req, res) {
         FetchUsers.doFetchUsers(req.body.username)
             .then(result => {
                 res.status(200).send({
@@ -21,7 +24,7 @@ class ShowController {
     }
 
 
-    static getRepos(req, res){
+    static getRepos(req, res) {
         FetchRepo.doFetchRepos(req.body.repos)
             .then(result => {
                 //console.log(result);
@@ -37,11 +40,11 @@ class ShowController {
             });
     }
 
-    static getCommits(req, res){
+    static getCommits(req, res) {
         FetchCommits.doFetchCommits(req.body.commitsInfo)
             .then(result => {
                 //console.log(result);
-                req.session.commits = result; //this could have potentially of broken something
+                req.session.commits = result; 
                 res.status(200).send({
                     user: req.body.commits_url,
                     result: result
@@ -53,7 +56,7 @@ class ShowController {
             });
     }
 
-    static returnCommits(req,res){
+    static returnCommits(req, res) {
         res.status(200).send(req.session.commits);
     }
 }
