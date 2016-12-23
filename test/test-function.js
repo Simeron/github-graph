@@ -4,6 +4,10 @@ const expect = require('chai').expect;
 const assert = require('chai').assert;
 const Commit = require("../models/commit");
 
+    /**
+    * This is my test document which tests out my model
+    * @param commits,
+    */
 
 describe("commitModel", () => {
     it("should exist", (done) => {
@@ -20,7 +24,7 @@ describe("commitModel", () => {
                     date:"2016-05-23T13:04:12Z"
                 },
                 message: 'test'
-            },
+            }, //testing my obj out with a dummy one
             
         }
         let commitModel = new Commit(testObject);

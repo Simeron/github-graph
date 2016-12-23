@@ -1,12 +1,16 @@
 $(() => {
 
+    /**
+    * This code talks is for displaying my results and appending them to the page using jquery
+    */
+
     $("#search").click((e) => {
         e.preventDefault();
         $.ajax({
             url: '/fetch-Users',
             method: 'POST',
             data: {
-                username: $("#searchBar").val()
+                username: $("#searchBar").val() //access search bar on index page
             }
         })
             .then((data) => {
@@ -17,7 +21,7 @@ $(() => {
                     console.log(theData[i]);
                     $("#enterUsername").append(`<a name="repoLink" data-repo="${theData[i].repos_url}" href="#">${theData[i].login}</a>`);
                 }
-            });
+            }); //code above access the data to place it 
 
     });
 
@@ -39,7 +43,7 @@ $(() => {
             }
         })
             .then((data) => {
-                window.location.href = "/repos";
+                window.location.href = "/repos"; //access search bar on repos page
             });
     }
 
@@ -64,7 +68,7 @@ $(() => {
         })
             .then((data) => {
                 console.log("i am here")
-                window.location.href = "/graph";
+                window.location.href = "/graph"; //access search bar on graph page
             });
     }
 

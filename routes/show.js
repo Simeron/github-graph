@@ -7,5 +7,6 @@ router.post("/set-repo", showController.getRepos);
 router.post("/set-commits", showController.getCommits);
 router.get('/commits', showController.returnCommits);
 
-
 module.exports = router;
+
+// redirects my POST requests above

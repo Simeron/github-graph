@@ -8,3 +8,5 @@ router.get("/repos", layoutController.showRepos);
 router.get("/graph", layoutController.showCommits);
 
 module.exports = router;
+
+// redirects my GET requests above

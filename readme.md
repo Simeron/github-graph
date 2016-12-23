@@ -26,3 +26,6 @@ This document tells you all about my application. The main **objectives** of thi
 6. This link will take you to another page which will display your graph, 
 7. As you move your mouse over different points of the graph you will see information about the commit, which are - the commit message and the date and time of the commit. 
 
+ENJOY! :) 
+
+
