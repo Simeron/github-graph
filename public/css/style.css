@@ -23,17 +23,24 @@ a[name] {
 }
 /*end of test sections*/
 
-/*start of input feild*/
+/*start of input feilds and button*/
 #search{
     margin-left: 45%;
     
 }
-/*end of input feilds*/
+
+.btn-flat:hover{
+    background-color: #00eaff;
+}
+
+#searchBar{
+        border-bottom: 1px solid #00eaff;
+    box-shadow: 0 1px 0 0 #00eaff;
+}
+/*end of input feilds and button*/
 
 /*start of table section*/
 table{
     margin-left: 10%;
 }
 /*end of table section*/
-
-
