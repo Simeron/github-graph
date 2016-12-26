@@ -8,6 +8,11 @@
 h1{
     text-align: center;
     font-family: 'Miriam Libre', sans-serif;
+    color: #4c4957
+}
+
+h4{
+    color: #4c4957;
 }
 
 #enterUsername{
@@ -19,7 +24,7 @@ h1{
 a[name] {
     display: block;
     font-family: 'Cutive Mono', monospace;
-    color: #000000;
+    color: #4c4957
 }
 /*end of test sections*/
 
@@ -42,5 +47,9 @@ a[name] {
 /*start of table section*/
 table{
     margin-left: 10%;
+}
+
+td, th{
+    color: #4c4957;
 }
 /*end of table section*/
